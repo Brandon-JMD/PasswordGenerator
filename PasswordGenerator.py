@@ -2,8 +2,8 @@ import random
 import string
 
 letters = string.ascii_letters
-numbers = '1234567890'
-characters = '!@£$%&*()#?'
+numbers = string.digits
+characters = string.punctuation
 allChars = letters + numbers + characters
 noNumbers = letters + characters
 noCharacters = letters + numbers

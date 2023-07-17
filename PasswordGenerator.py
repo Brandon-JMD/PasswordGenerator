@@ -11,7 +11,7 @@ noChars = letters + numbers
 
 def StandardGen():
     password = ''.join(secrets.choice(allChars) for x in range(16))
-    print("Your password is:", password)
+    print("\nYour password is:", password)
 
 
 def NoNumberGen():
@@ -36,7 +36,7 @@ modifyChars = input("\nWould you like to remove a section of the characters list
 
 if modifyChars.lower() == 'yes':
 
-    removeCharChoice = input("What would you like to remove? [numbers, characters or both] ")
+    removeCharChoice = input("\nWhat would you like to remove? [numbers, characters or both] ")
 
     if removeCharChoice.lower() == 'numbers':
         NoNumberGen()
@@ -45,10 +45,10 @@ if modifyChars.lower() == 'yes':
     elif removeCharChoice.lower() == 'both':
         OnlyLettersGen()
     else:
-        print("That is not a valid option")
+        print("\nThat is not a valid option")
 
 elif modifyChars.lower() == 'no':
     StandardGen()
 
 else:
-    print("That is not a valid option")
+    print("\nThat is not a valid option")

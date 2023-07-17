@@ -1,4 +1,3 @@
-import random
 import string
 import secrets
 
@@ -7,38 +6,26 @@ numbers = string.digits
 characters = string.punctuation
 allChars = letters + numbers + characters
 noNumbers = letters + characters
-noCharacters = letters + numbers
+noChars = letters + numbers
 
 
 def StandardGen():
-    password = ''
-    for x in range(16):
-        password += random.choice(allChars)
-
+    password = ''.join(secrets.choice(allChars) for x in range(16))
     print("Your password is:", password)
 
 
 def NoNumberGen():
-    password = ''
-    for x in range(16):
-        password += random.choice(noNumbers)
-
+    password = ''.join(secrets.choice(noNumbers) for x in range(16))
     print("\nYour password is:", password)
 
 
 def NoCharacterGen():
-    password = ''
-    for x in range(16):
-        password += random.choice(noCharacters)
-
+    password = ''.join(secrets.choice(noChars) for x in range(16))
     print("\nYour password is:", password)
 
 
 def OnlyLettersGen():
-    password = ''
-    for x in range(16):
-        password += random.choice(letters)
-
+    password = ''.join(secrets.choice(letters) for x in range(16))
     print("\nYour password is:", password)
 
 

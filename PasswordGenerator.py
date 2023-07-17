@@ -1,5 +1,6 @@
 import random
 import string
+import secrets
 
 letters = string.ascii_letters
 numbers = string.digits
